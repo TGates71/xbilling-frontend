@@ -117,19 +117,20 @@ function _payment_method(method_id){
 <div class="signup signup-body">
 	<div id="container">
     <div class="flex-container">
-    	<div id="header">&nbsp;</div>
+    	<!--<div id="header">&nbsp;</div>-->
             <?php
                 if($error && $error_msg){
             ?>
                     <div class="error">
                         <?php echo($error_msg);?>
                     </div>
-                    <div class="clear">&nbsp</div>
+                    <div class="clear">&nbsp;</div>
             <?php 
                 }
             ?>
-        <div id="content" style="height: 540px;">
+        <div id="content">
             <?php if(!$error){?>
+            <div id="header">&nbsp;</div>
                 <div align="center">            
                     <h3 style="font-size: 18px;">Invoice</h3>
                 </div>
@@ -258,13 +259,11 @@ function _payment_method(method_id){
                     } 
                 ?>
                 <?php } ?>
+                    <div id="print_invoice" align="right" class="clear">
+                        <input type="button" name="btn_submit" value="Print Invoice" class="submit" onclick="window.print();">
+                    </div> 
                 </div>
-                <br />
-                <div id="print_invoice" align="right" class="clear">
-                    <input type="button" name="btn_submit" value="Print Invoice" class="submit" onclick="window.print();">
-                </div>                
-                                
-            <?php } ?>
+           <?php } ?>
         </div>
     </div>
     </div><!-- closes flex-container -->

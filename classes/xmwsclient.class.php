@@ -112,7 +112,7 @@ class xmwsclient {
         $fp = @fopen($url, 'rb', false, $ctx);
         if (!$fp) {
             //log error
-            $err_str = error_get_last();
+            $err_str = var_dump(error_get_last());
             $err_fp = fopen($log_dir.'/'.$log_file, 'a');
             fwrite($err_fp, $err_str."\n\n");
             fclose($err_fp);
@@ -122,7 +122,7 @@ class xmwsclient {
         //var_dump($response);
         if ($response == false) {
             //log error
-            $err_str = error_get_last();
+            $err_str = var_dump(error_get_last());
             $err_fp = fopen($log_dir.'/'.$log_file, 'a');
             fwrite($err_fp, $err_str."\n\n");
             fclose($err_fp);

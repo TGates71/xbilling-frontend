@@ -1,21 +1,7 @@
-.signup .flex-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 .signup-body {
-	margin: 0 auto;
+	margin: 5 auto;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 11px;
-}
-.signup .center {
-	text-align: center;
-    display: block;
-    margin: auto;
-    width: 50%;
-}
-.signup .top {
-	vertical-align: text-top;
 }
 .signup form {
 	margin: 0px;
@@ -48,7 +34,7 @@
 }
 .signup #container {
 	width: 550px;
-	/*height: 650px;*/
+	height: 650px;
 	clear: both;
 	margin: 0 auto;
 }
@@ -60,10 +46,15 @@
 .signup #content {
 	border: 1px solid #6b7ea9;
 	flex: 1;
-	/*height: 500px;*/
+	height: 500px;
 	width: 580px;
 	padding: 10px;
 	display: block;
+}
+.signup .flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .signup #footer {
 	font-family: Arial, Helvetica, sans-serif;
